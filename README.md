@@ -130,7 +130,7 @@ Most LLMs hallucinate astronomical data — planets, degrees, house positions. O
 |---|---|
 | 🔑 Dashboard & API Keys | [openephemeris.com/dashboard](https://openephemeris.com/dashboard) |
 | 📖 Documentation | [openephemeris.com/docs](https://openephemeris.com/docs) |
-| 💰 Pricing | [openephemeris.com/pay](https://openephemeris.com/pay) |
+| 💰 Pricing | [openephemeris.com/#pricing](https://openephemeris.com/#pricing) |
 | 🟢 Status | [status.openephemeris.com](https://status.openephemeris.com) |
 | 📦 npm | [@openephemeris/mcp-server](https://www.npmjs.com/package/@openephemeris/mcp-server) |
 | 🐛 Issues | [GitHub Issues](https://github.com/Spirit-River/openephemeris-examples/issues) |
