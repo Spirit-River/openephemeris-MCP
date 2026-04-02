@@ -37,8 +37,6 @@ Get your free API key at [openephemeris.com/dashboard](https://openephemeris.com
 ### One-click Install — Cursor
 
 [![Install in Cursor](https://cursor.com/deeplink/mcp-install-dark.svg)](https://cursor.com/en/install-mcp?name=OpenEphemeris&config=eyJjb21tYW5kIjoibnB4IiwiYXJncyI6WyIteSIsIkBvcGVuZXBoZW1lcmlzL21jcC1zZXJ2ZXIiXSwiZW52Ijp7Ik9QRU5FUEhFTUVSSVNfQVBJX0tFWSI6IllPVVJfQVBJX0tFWV9IRVJFIn19)
-or
-https://cursor.com/en/install-mcp?name=OpenEphemeris&config=eyJjb21tYW5kIjoibnB4IiwiYXJncyI6WyIteSIsIkBvcGVuZXBoZW1lcmlzL21jcC1zZXJ2ZXIiXSwiZW52Ijp7Ik9QRU5FUEhFTUVSSVNfQVBJX0tFWSI6IllPVVJfQVBJX0tFWV9IRVJFIn19
 
 > Replace `YOUR_API_KEY_HERE` in Cursor's MCP settings after install.
 
