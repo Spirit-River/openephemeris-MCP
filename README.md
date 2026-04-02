@@ -12,7 +12,7 @@ Official MCP server and integration examples for [Open Ephemeris](https://openep
 
 Give any AI agent access to **48 typed astrological tools** with zero hallucination. Powered by Swiss Ephemeris.
 
-### Quick Install — Claude Desktop
+### Quick Install — Claude Desktop/Cursor
 
 Add to your config file:
 - **macOS:** `~/Library/Application Support/Claude/claude_desktop_config.json`
@@ -34,26 +34,6 @@ Add to your config file:
 
 Get your free API key at [openephemeris.com/dashboard](https://openephemeris.com/dashboard). Free Explorer tier — no credit card required.
 
-### Quick Install — Cursor
-
-Add to `~/.cursor/mcp.json`:
-```json
-{
-  "mcpServers": {
-    "openephemeris": {
-      "command": "npx",
-      "args": ["-y", "@openephemeris/mcp-server"],
-      "env": {
-        "OPENEPHEMERIS_API_KEY": "YOUR_API_KEY_HERE"
-      }
-    }
-  }
-}
-```
-
-Get your free API key at [openephemeris.com/dashboard](https://openephemeris.com/dashboard).
-
-> Replace `YOUR_API_KEY_HERE` in Cursor's MCP settings after install.
 
 ### Other clients — Windsurf, Zed, etc.
 
