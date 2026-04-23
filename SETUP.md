@@ -83,16 +83,88 @@ cursor://anysphere.cursor-deeplink/mcp/install?name=openephemeris&config=eyJjb21
 
 ---
 
-### ChatGPT (Custom GPT)
+### Remote / Hosted Endpoint (Claude Web & All Remote Clients)
 
-1. Go to [chat.openai.com/gpts/editor](https://chat.openai.com/gpts/editor)
+For any client that accepts a hosted MCP URL (Claude Web, Smithery, custom AI agents), use the **Streamable HTTP** endpoint directly — no download, no Node.js:
+
+**MCP URL:** `https://mcp.openephemeris.com/mcp`
+
+Pass your API key as a request header:
+
+```
+X-API-Key: YOUR_API_KEY
+```
+
+Get a key from [openephemeris.com/dashboard](https://openephemeris.com/dashboard) → API Keys tab.
+
+> 💡 This is the MCP 2025-11-25 Streamable HTTP spec — supported by Claude Web, Smithery, and modern agents.
+> The legacy SSE endpoint (`/sse?apiKey=YOUR_KEY`) remains available for clients that don't yet support Streamable HTTP.
+
+---
+
+### ChatGPT — MCP (Developer Mode)
+
+> **Requires:** ChatGPT Plus, Pro, Team, or Enterprise plan.
+
+ChatGPT natively supports remote MCP servers via Developer Mode — no Custom GPT needed:
+
+1. Go to **Settings → Apps → Advanced** and toggle **Developer Mode** on
+2. Click **Create app**, name it `Open Ephemeris`
+3. Enter the MCP URL: `https://mcp.openephemeris.com/mcp`
+4. Set authentication: **API Key** → header name `X-API-Key` → paste your key
+5. Save — tools are registered automatically
+6. In any new chat, click **+** → **More** → select **Open Ephemeris** to enable
+
+```
+MCP URL:  https://mcp.openephemeris.com/mcp
+Header:   X-API-Key: YOUR_API_KEY
+```
+
+> 💡 Get a free API key at [openephemeris.com/dashboard](https://openephemeris.com/dashboard) → API Keys tab.
+
+---
+
+### ChatGPT — Custom GPT Action (Legacy)
+
+Alternatively, add OpenEphemeris to a custom GPT as an Action (works on all plan tiers, but requires an API key):
+
+1. Go to [chatgpt.com/gpts/editor](https://chatgpt.com/gpts/editor)
 2. Create new GPT → **Configure** → **Actions** → **Import from URL**
 3. Enter: `https://api.openephemeris.com/openapi.json`
-4. Set authentication: **API Key** → Header name: `X-Meridian-API-Key`
+4. Set authentication: **API Key** → Header name: `X-OpenEphemeris-API-Key`
 5. Paste your API key as the value
 6. Save and publish
 
 > ⚠️ ChatGPT Custom GPTs don't support the device auth flow. You'll need an API key for this option.
+
+---
+
+### Gemini CLI
+
+Google's Gemini CLI supports remote MCP servers natively via `~/.gemini/settings.json`:
+
+1. Install Gemini CLI if needed:
+   ```bash
+   npm install -g @google/gemini-cli
+   # or: brew install gemini
+   ```
+2. Create or open `~/.gemini/settings.json` and add:
+   ```json
+   {
+     "mcpServers": {
+       "openephemeris": {
+         "httpUrl": "https://mcp.openephemeris.com/mcp",
+         "headers": {
+           "X-API-Key": "YOUR_API_KEY"
+         }
+       }
+     }
+   }
+   ```
+3. Replace `YOUR_API_KEY` with a key from [openephemeris.com/dashboard](https://openephemeris.com/dashboard)
+4. Run `gemini` and type `/mcp` to confirm the server is connected and list available tools
+
+> 💡 For project-scoped config, use `.gemini/settings.json` in your project root instead of `~/.gemini/settings.json`.
 
 ---
 
