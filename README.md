@@ -224,28 +224,28 @@ The server is hosted at `https://mcp.openephemeris.com/mcp` with full Streamable
 | Transit chart snapshot | `ephemeris_natal_transits` | Explorer |
 | Moon phase / VOC | `ephemeris_moon_phase` | Explorer |
 | Eclipse next visible | `ephemeris_next_eclipse` | Explorer |
-| Electional window | `ephemeris_electional` | Developer |
-| Moment analysis | `electional_moment_analysis` | Developer |
-| Station tracker | `electional_station_tracker` | Developer |
-| Aspect search | `electional_aspect_search` | Developer |
+| Electional window | `ephemeris_electional` | Pro |
+| Moment analysis | `electional_moment_analysis` | Pro |
+| Station tracker | `electional_station_tracker` | Pro |
+| Aspect search | `electional_aspect_search` | Pro |
 | Human Design chart | `human_design_chart` | Explorer |
 | HD composite | `human_design_composite` | Explorer |
 | HD penta | `human_design_penta` | Explorer |
 | HD return / opposition | `hd_planetary_return`, `hd_opposition` | Explorer |
 | Vedic chart | `vedic_chart` | Explorer |
 | BaZi (Chinese) | `chinese_bazi` | Explorer |
-| Synastry | `ephemeris_synastry` | Developer |
-| Composite chart | `ephemeris_composite` | Developer |
-| Relocation chart | `ephemeris_relocation` | Developer |
+| Synastry | `ephemeris_synastry` | Pro |
+| Composite chart | `ephemeris_composite` | Pro |
+| Relocation chart | `ephemeris_relocation` | Pro |
 | Progressed chart | `ephemeris_progressed_chart` | Explorer |
-| Solar return | `ephemeris_solar_return` | Developer |
-| Lunar return | `ephemeris_lunar_return` | Developer |
-| Planetary return | `ephemeris_planetary_return` | Developer |
-| Astrocartography lines | `acg_power_lines` | Developer |
-| ACG hits at location | `acg_hits` | Scale |
+| Solar return | `ephemeris_solar_return` | Pro |
+| Lunar return | `ephemeris_lunar_return` | Pro |
+| Planetary return | `ephemeris_planetary_return` | Pro |
+| Astrocartography lines | `acg_power_lines` | Pro |
+| ACG hits at location | `acg_hits` | Pro |
 | Venus Star Points | `venus_star_points` + 4 more | Explorer |
-| Chart wheel image | `ephemeris_chart_wheel` | Developer |
-| Bi-wheel image | `ephemeris_bi_wheel` | Developer |
+| Chart wheel image | `ephemeris_chart_wheel` | Explorer |
+| Bi-wheel image | `ephemeris_bi_wheel` | Explorer |
 | Dignities / Midpoints / Fixed stars | `ephemeris_dignities`, `ephemeris_midpoints`, `ephemeris_fixed_stars` | Explorer |
 
 ## Tooling Model
