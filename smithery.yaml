@@ -1,15 +1,9 @@
-startCommand:
-  type: stdio
-  config:
-    command: npx
-    args:
-      - "-y"
-      - "@openephemeris/mcp-server@latest"
-    env:
-      OPENEPHEMERIS_API_KEY:
-        type: string
-        description: "Your Open Ephemeris API key. Get one at openephemeris.com/dashboard — free Explorer tier available."
-        required: true
+# Open Ephemeris MCP Server — Smithery configuration
+# Spec: https://smithery.ai/docs/build/publish
+#
+# Two transports are available:
+#   stdio  — local npx invocation (this config, used by Claude Desktop / Cursor)
+#   http   — hosted Streamable HTTP at https://mcp.openephemeris.com/mcp
 
 name: Open Ephemeris
 description: >
@@ -21,3 +15,36 @@ description: >
   (format=llm) that compresses chart responses by ~50%. Free Explorer tier available.
 iconUrl: https://mcp.openephemeris.com/icon.png
 homepage: https://openephemeris.com
+
+# JSON Schema for the configuration form rendered in Smithery's UI
+configSchema:
+  type: object
+  required:
+    - apiKey
+  properties:
+    apiKey:
+      type: string
+      description: >
+        Your Open Ephemeris API key. Get a free Explorer key at
+        https://openephemeris.com/dashboard — no credit card required.
+      default: ""
+    format:
+      type: string
+      enum:
+        - json
+        - llm
+      description: >
+        Default output format for all tools. 'llm' returns compact,
+        token-optimized output (~50% smaller). 'json' returns full verbose JSON.
+        Individual tool calls can override this setting.
+      default: json
+
+# How to start the server locally (stdio transport for Claude Desktop / Cursor)
+startCommand:
+  type: stdio
+  commandFunction: |-
+    (config) => ({
+      command: "npx",
+      args: ["-y", "@openephemeris/mcp-server@latest"],
+      env: { OPENEPHEMERIS_API_KEY: config.apiKey }
+    })
