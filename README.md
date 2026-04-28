@@ -18,9 +18,11 @@ Standard LLMs (Claude, GPT-4, Gemini) are incredible at text, but they are inher
 
 By connecting the OpenEphemeris MCP to your AI agent, you offload the complex calculations to a deterministic, high-precision API powered by NASA JPL data. Your agent stops guessing and starts fetching millisecond-accurate placements.
 
+![Claude Desktop — OpenEphemeris tool call in progress](./assets/claude-demo-thinking.png)
+
 ![Claude Desktop — live Moon data via OpenEphemeris MCP](./assets/claude-demo-moon.png)
 
-*Claude calling the OpenEphemeris MCP to return exact lunar RA, declination, phase, and illumination in real-time.*
+*Claude calling the OpenEphemeris MCP tool in real-time to return exact lunar RA, declination, phase, and illumination — live from the NASA JPL ephemeris.*
 
 ---
 
