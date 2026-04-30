@@ -287,6 +287,17 @@ await client.connect(transport)
 
 ---
 
+## Pricing
+
+OpenEphemeris uses a Pay-As-You-Go credit system:
+- $5 for 150 credits
+- $10 for 350 credits
+- $20 for 900 credits
+
+**Free Explorer Tier:** All accounts include a free tier with a daily limit of 50 requests/day.
+
+---
+
 ## Auth and Error Behavior
 
 | Status | Behavior |

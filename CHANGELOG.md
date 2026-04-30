@@ -154,7 +154,7 @@ Version numbering follows [Semantic Versioning](https://semver.org/).
 - SSE server chart wheel responses now correctly deliver native MCP image blocks instead of raw base64 JSON
 
 ### Changed
-- Explorer tier daily cap set to 50 credits/day (resets midnight UTC)
+- Explorer tier daily cap set to 50 requests/day (resets midnight UTC)
 - Catalog and metadata endpoints (`/acg/meta`, `/acg/datasets`, `/catalogs/*`) moved to free tier (0 credits)
 
 ---
